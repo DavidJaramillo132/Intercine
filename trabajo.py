@@ -23,15 +23,6 @@ def crear_frame(raiz):
 
 # Función para actualizar el estado del asiento
 def seleccionar_asiento(boton, horario, pelicula, sala_numero, fila, columna):
-    """
-    Actualiza el estado de un asiento seleccionado en la interfaz gráfica.
-    :param boton: El botón del asiento que se ha seleccionado.
-    :param horario: El horario de la función.
-    :param pelicula: El nombre de la película.
-    :param sala_numero: El número de la sala de cine.
-    :param fila: La fila del asiento seleccionado.
-    :param columna: La columna del asiento seleccionado.
-    """
     clave = (pelicula, horario, sala_numero)
     
     if estado_asientos[clave][fila][columna] == "O":
@@ -110,13 +101,6 @@ def seleccionar_horario_sala(pelicula):
 # Función para mostrar la disposición de asientos
 def mostrar_asientos(pelicula, horario, sala_numero):
     """
-    Muestra la interfaz para seleccionar los asientos en una sala de cine específica.
-
-    Limpia el contenido existente en el frame principal y crea una nueva ventana (Toplevel)
-    para mostrar la selección de asientos. Cada asiento se representa como un botón que
-    puede estar libre (L), ocupado (O) o seleccionado (S). Permite al usuario seleccionar
-    los asientos deseados y confirmar las reservas.
-
     :param pelicula: El nombre de la película.
     :param horario: El horario de la función.
     :param sala_numero: El número de la sala de cine.
